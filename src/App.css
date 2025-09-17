@@ -17,6 +17,27 @@ body,
    background-color: #696773;
    color: black;
 }
+
+.container-btn {
+  background-color: black;    
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-left: 1rem;           
+  box-shadow: 0 3px 8px rgba(74, 74, 75, 0.3);
+}
+
+.container-btn:hover {
+  background-color: black;    
+  transform: translateY(-1px);
+  box-shadow: white;
+}
+
 .footer{
   /* border: 1px solid blue; */
   position: fixed;
@@ -43,3 +64,95 @@ body,
   margin-top: 5px;
 }
 
+/* Landing Page */
+.landingPage {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.landing-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0 20%;
+}
+
+.landing-subtext {
+  font-weight: 500;
+  color: grey;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Primary CTA (Get Started button) */
+.btn-primary {
+  background-color: black;   /* bright blue for attention */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(123, 124, 126, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: black;   /* darker blue */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(75, 75, 77, 0.4);
+}
+
+/* Secondary CTA (Login button) */
+.btn-secondary {
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.section-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-subtext {
+  font-weight: 500;
+  color: grey;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Login page */
+.container-login {
+  border: 1px solid red;
+  width: 50%; 
+  margin: auto;             
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f8;       
+  padding: 1rem;
+}
