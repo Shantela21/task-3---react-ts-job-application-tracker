@@ -8,5 +8,38 @@ body,
 #root {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
+
+.navbar{
+  /* border: 1px solid blue; */
+  height: 6vh;
+   background-color: #696773;
+   color: black;
+}
+.footer{
+  /* border: 1px solid blue; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #696773;
+  color: black;
+  text-align: center;
+  height: 6vh;
+}
+.footer >p{
+}
+.container-btn{
+  /* border: 1px solid blue; */
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  right: 0;
+  border-radius: 5px;
+  font-weight:bold;
+  margin-top: 5px;
+}
+

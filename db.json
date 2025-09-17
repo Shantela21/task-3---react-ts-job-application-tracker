@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "demo",
+      "passwordHash": "$2a$10$tCt7pvlr0rR7uA7AlhWcUOZXXjPXzmQp2j/3nJGKv8GGBqZFeHeiy",
+      "createdAt": "2025-09-01T10:00:00.000Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "company": "Acme Corp",
+      "role": "Frontend Developer",
+      "status": "Applied",
+      "dateApplied": "2025-09-05",
+      "details": "React, TypeScript, remote role. Contact: hr@acme.com",
+      "createdAt": "2025-09-05T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "company": "Beta Ltd",
+      "role": "UI Engineer",
+      "status": "Interviewed",
+      "dateApplied": "2025-09-10",
+      "details": "Onsite interview. Bring portfolio.",
+      "createdAt": "2025-09-10T09:00:00.000Z"
+    }
+  ]
+}
