@@ -152,7 +152,80 @@ body,
   justify-content: center;
   align-items: center;
 } */
+.home{
+  border: 1px solid red;
+  height: 83vh;
+}
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f6f8;
+  font-family: 'Segoe UI', sans-serif;
+}
 
+.dashboard-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.dashboardForm {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.dashboardForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #444;
+}
+
+.dashboardForm input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+  transition: 0.3s;
+}
+
+.dashboardForm input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
 
 
 .footer{
