@@ -8,5 +8,382 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  /* border: 1px solid red; */
+}
+
+.navbar{
+  /* border: 1px solid blue; */
+  height: 8vh;
+   background-color: #696773;
+   color: black;
+}
+
+.container-btn {
+  background-color: black;    
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  top: 10px;
+  margin: 8px;
+  margin-left: 1rem;           
+  box-shadow: 0 3px 8px rgba(74, 74, 75, 0.3);
+}
+
+.container-btn:hover {
+  background-color: black;    
+  transform: translateY(-1px);
+  box-shadow: white;
+}
+
+
+.container-btn{
+  /* border: 1px solid blue; */
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  right: 0;
+  border-radius: 5px;
+  font-weight:bold;
+  margin-top: 5px;
+}
+
+/* Landing Page */
+.landingPage {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.landing-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0 20%;
+}
+
+.landing-subtext {
+  font-weight: 500;
+  color: grey;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+
+.btn-primary {
+  background-color: black;  
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(123, 124, 126, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: black;  
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(75, 75, 77, 0.4);
+}
+
+
+.btn-secondary {
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.section-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-subtext {
+  font-weight: 500;
+  color: grey;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Login page */
+.container-login {
   border: 1px solid red;
+  border-radius: 20px;
+  width: 40%;
+  height: 40vh;
+  background-color: #f4f6f8;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* .form{
+  justify-content: center;
+  align-items: center;
+} */
+.home{
+  border: 1px solid red;
+  height: 83vh;
+}
+/* Container for the whole dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f7f9;
+  padding: 30px; /* extra padding for desktop */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Two-column layout: form left, cards right */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* fixed width form, rest for cards */
+  gap: 25px;
+  flex: 1;
+  margin-top: 20px;
+}
+
+/* Left column: Form styling */
+.dashboard-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.dashboardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dashboardForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.dashboardForm input,
+.dashboardForm select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.dashboardForm input:focus,
+.dashboardForm select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+
+/* Controls (search/filter/sort) */
+.dashboard-controls {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-controls input,
+.dashboard-controls select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.dashboard-controls input:focus,
+.dashboard-controls select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Right column: Cards stacked vertically */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.application-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.application-card:hover {
+  transform: translateY(-4px);
+}
+
+.application-card h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.application-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons inside cards */
+.delete-btn, .edit-btn {
+  margin-top: 10px;
+  margin-right: 6px;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.delete-btn {
+  background: #e74c3c;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.edit-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #4CAF50;
+}
+
+/* Edit modal */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-modal > div {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-modal input,
+.edit-modal select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+.edit-modal button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* Mobile view: stack columns */
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-container {
+    margin-top: 20px;
+  }
+
+  .dashboard-form {
+    width: 100%;
+  }
+
+  .edit-modal > div {
+    width: 90%;
+  }
+}
+
+
+
+
+.footer{
+  /* border: 1px solid blue; */
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #696773;
+  color: black;
+  text-align: center;
+  height: 8vh;
+}
+.footer >p{
 }
