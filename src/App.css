@@ -156,81 +156,167 @@ body,
   border: 1px solid red;
   height: 83vh;
 }
+/* Container for the whole dashboard */
 .dashboard-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #f4f6f8;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.dashboard-form {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #f9f9f9;
   padding: 20px;
 }
 
-.dashboardForm {
-  background: white;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 350px;
+/* Two-column layout: form left, cards right */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* fixed width form, rest for cards */
+  gap: 20px;
+  flex: 1;
+  margin-top: 20px;
 }
 
-.form-title {
-  text-align: center;
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 20px;
+/* Left column: Form styling */
+.dashboard-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dashboardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .dashboardForm label {
   display: flex;
   flex-direction: column;
-  font-weight: 500;
-  color: #444;
+  font-weight: bold;
+  color: #333;
 }
 
 .dashboardForm input {
   padding: 8px;
-  border: 1px solid #ccc;
   border-radius: 6px;
+  border: 1px solid #ccc;
   margin-top: 4px;
-  transition: 0.3s;
 }
 
 .dashboardForm input:focus {
   border-color: #4CAF50;
   outline: none;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
 .submit-btn {
+  margin-top: 10px;
   padding: 10px;
-  background-color: #4CAF50;
-  color: white;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 5px;
   transition: 0.3s;
 }
 
 .submit-btn:hover {
-  background-color: #45a049;
+  background: #45a049;
 }
+
+/* Right column: Cards stacked vertically */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.application-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.application-card:hover {
+  transform: translateY(-3px);
+}
+
+.application-card h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+}
+
+.application-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons inside cards */
+.delete-btn, .edit-btn {
+  margin-top: 8px;
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}
+
+.delete-btn {
+  background: #e74c3c;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.edit-btn {
+  background: #f1c40f;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background: #d4ac0d;
+}
+
+/* Mobile view: stack columns */
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-container {
+    margin-top: 20px;
+  }
+}
+.dashboard-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-controls input,
+.dashboard-controls select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.dashboard-controls input:focus,
+.dashboard-controls select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
 
 
 .footer{
   /* border: 1px solid blue; */
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;

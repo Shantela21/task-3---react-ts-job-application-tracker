@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div>
       <div className='navbar'>
-        <Button/>  
+        {/* <Button/>   */}
       </div>
     </div>
   )
