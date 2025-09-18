@@ -161,15 +161,16 @@ body,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #f9f9f9;
-  padding: 20px;
+  background: #f4f7f9;
+  padding: 30px; /* extra padding for desktop */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Two-column layout: form left, cards right */
 .dashboard-content {
   display: grid;
   grid-template-columns: 350px 1fr; /* fixed width form, rest for cards */
-  gap: 20px;
+  gap: 25px;
   flex: 1;
   margin-top: 20px;
 }
@@ -177,41 +178,44 @@ body,
 /* Left column: Form styling */
 .dashboard-form {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 
 .dashboardForm {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .dashboardForm label {
   display: flex;
   flex-direction: column;
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: #2c3e50;
 }
 
-.dashboardForm input {
-  padding: 8px;
-  border-radius: 6px;
+.dashboardForm input,
+.dashboardForm select {
+  padding: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  margin-top: 4px;
+  margin-top: 5px;
+  transition: 0.3s;
 }
 
-.dashboardForm input:focus {
+.dashboardForm input:focus,
+.dashboardForm select:focus {
   border-color: #4CAF50;
   outline: none;
 }
 
 .submit-btn {
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 15px;
+  padding: 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #4CAF50;
   color: white;
   font-weight: bold;
@@ -223,46 +227,70 @@ body,
   background: #45a049;
 }
 
+/* Controls (search/filter/sort) */
+.dashboard-controls {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-controls input,
+.dashboard-controls select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.dashboard-controls input:focus,
+.dashboard-controls select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
 /* Right column: Cards stacked vertically */
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
 .application-card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   transition: 0.3s;
 }
 
 .application-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .application-card h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
   color: #2c3e50;
+  font-size: 18px;
 }
 
 .application-card p {
-  margin: 5px 0;
+  margin: 6px 0;
   font-size: 14px;
   color: #555;
 }
 
 /* Buttons inside cards */
 .delete-btn, .edit-btn {
-  margin-top: 8px;
-  margin-right: 5px;
-  padding: 6px 10px;
+  margin-top: 10px;
+  margin-right: 6px;
+  padding: 7px 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
   color: white;
+  transition: 0.3s;
 }
 
 .delete-btn {
@@ -274,12 +302,54 @@ body,
 }
 
 .edit-btn {
-  background: #f1c40f;
-  color: #333;
+  background: #4CAF50;
+  color: white;
 }
 
 .edit-btn:hover {
-  background: #d4ac0d;
+  background: #4CAF50;
+}
+
+/* Edit modal */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-modal > div {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-modal input,
+.edit-modal select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+.edit-modal button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 /* Mobile view: stack columns */
@@ -291,26 +361,16 @@ body,
   .cards-container {
     margin-top: 20px;
   }
-}
-.dashboard-controls {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+  .dashboard-form {
+    width: 100%;
+  }
+
+  .edit-modal > div {
+    width: 90%;
+  }
 }
 
-.dashboard-controls input,
-.dashboard-controls select {
-  padding: 6px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.dashboard-controls input:focus,
-.dashboard-controls select:focus {
-  outline: none;
-  border-color: #4CAF50;
-}
 
 
 
