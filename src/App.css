@@ -13,7 +13,7 @@ body,
 
 .navbar{
   /* border: 1px solid blue; */
-  height: 6vh;
+  height: 8vh;
    background-color: #696773;
    color: black;
 }
@@ -28,6 +28,8 @@ body,
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  top: 10px;
+  margin: 8px;
   margin-left: 1rem;           
   box-shadow: 0 3px 8px rgba(74, 74, 75, 0.3);
 }
@@ -38,19 +40,7 @@ body,
   box-shadow: white;
 }
 
-.footer{
-  /* border: 1px solid blue; */
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #696773;
-  color: black;
-  text-align: center;
-  height: 6vh;
-}
-.footer >p{
-}
+
 .container-btn{
   /* border: 1px solid blue; */
   position: absolute;
@@ -91,9 +81,9 @@ body,
   margin-bottom: 4rem;
 }
 
-/* Primary CTA (Get Started button) */
+
 .btn-primary {
-  background-color: black;   /* bright blue for attention */
+  background-color: black;  
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -106,12 +96,12 @@ body,
 }
 
 .btn-primary:hover {
-  background-color: black;   /* darker blue */
+  background-color: black;  
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(75, 75, 77, 0.4);
 }
 
-/* Secondary CTA (Login button) */
+
 .btn-secondary {
   background-color: transparent;
   color: black;
@@ -148,11 +138,33 @@ body,
 /* Login page */
 .container-login {
   border: 1px solid red;
-  width: 50%; 
-  margin: auto;             
-  display: flex;
+  border-radius: 20px;
+  width: 40%;
+  height: 40vh;
+  background-color: #f4f6f8;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* .form{
   justify-content: center;
   align-items: center;
-  background-color: #f4f6f8;       
-  padding: 1rem;
+} */
+
+
+
+.footer{
+  /* border: 1px solid blue; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #696773;
+  color: black;
+  text-align: center;
+  height: 8vh;
+}
+.footer >p{
 }

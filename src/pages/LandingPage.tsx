@@ -18,7 +18,9 @@ export default function LandingPage() {
         </p>
 
         <div className="landing-buttons">
-          <button className="btn-primary">Start Tracking Jobs</button>
+          <Link to="/GetStarted">
+          <button className="btn-primary">Start Tracking Jobs</button></Link>
+          
           <Link to="/Login">
            <button className="btn-secondary">Login To Your Account 
              
