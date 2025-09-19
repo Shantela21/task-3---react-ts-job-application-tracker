@@ -370,7 +370,18 @@ body,
     width: 90%;
   }
 }
-
+      
+        .not-found-container {
+          background-image: url('/src/assets/Screenshot_2025-09-19_093329-removebg-preview.png'); 
+          background-size: cover;
+          background-position: center;
+          height: 100vh; 
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
 
 
 
@@ -383,7 +394,8 @@ body,
   background-color: #696773;
   color: black;
   text-align: center;
-  height: 8vh;
+  height: 10vh;
 }
 .footer >p{
+
 }

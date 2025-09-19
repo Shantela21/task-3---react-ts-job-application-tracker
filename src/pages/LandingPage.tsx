@@ -1,17 +1,13 @@
 import React from 'react'
-<<<<<<< HEAD
-=======
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
->>>>>>> dev
 
 export default function LandingPage() {
   return (
     <div>
-<<<<<<< HEAD
-      
-=======
+
       <Navbar/>
       <div className="landingPage">
         <h1 className="landing-heading">
@@ -44,7 +40,7 @@ export default function LandingPage() {
         </p>
       </div>
       <Footer/>
->>>>>>> dev
+
     </div>
   )
 }
