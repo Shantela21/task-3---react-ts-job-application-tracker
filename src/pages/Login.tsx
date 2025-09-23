@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import BackButton from '../components/BackButton';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -40,6 +41,7 @@ export default function Login() {
   return (
     <div>
       <Navbar />
+      <BackButton/>
       <div className="container-login">
         <h2
           style={{
@@ -78,7 +80,7 @@ export default function Login() {
           <br />
           <br />
 
-          <button type="submit"> <Link to='/Dashboard'>Submit</Link></button>
+          <button type="submit"> <Link to='/Dashboard' style={{color:"black"}}>Submit</Link></button>
         </form>
 
         {message && (

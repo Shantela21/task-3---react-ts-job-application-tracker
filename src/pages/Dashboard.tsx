@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 interface Application {
+  id?: number
   company: string
   role: string
   status: 'Rejected' | 'Applied' | 'Interviewed' | string
@@ -13,8 +14,8 @@ interface Application {
 }
 
 export default function Dashboard() {
-  // States
   const [applications, setApplications] = useState<Application[]>([])
+  const userId = localStorage.getItem('userId');
   const [formData, setFormData] = useState<Application>({
     company: '',
     role: '',
@@ -31,6 +32,23 @@ export default function Dashboard() {
   const [filterStatus, setFilterStatus] = useState(searchParams.get('status') || '')
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>(searchParams.get('sort') === 'desc' ? 'desc' : 'asc')
 
+  const API_URL = "http://localhost:5000/applications"
+
+  // Load applications from db.json
+  useEffect(() => {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => {
+        // Only show applications for the logged-in user
+        if (userId) {
+          setApplications(data.filter((app: any) => app.userId === userId));
+        } else {
+          setApplications([]);
+        }
+      })
+      .catch(err => console.error("Error fetching applications:", err))
+  }, [userId])
+
   // Sync URL params
   useEffect(() => {
     const params: any = {}
@@ -40,31 +58,31 @@ export default function Dashboard() {
     setSearchParams(params)
   }, [searchQuery, filterStatus, sortOrder, setSearchParams])
 
-  // Form handlers
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
+  // Add new application
   const handleAddApplication = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (formData.company && formData.role) {
-      setApplications([...applications, { ...formData }]) // Create a new object
-      setFormData({
-        company: '',
-        role: '',
-        status: '',
-        date: '',
-        duties: '',
-        requirements: ''
+    e.preventDefault();
+    if (formData.company && formData.role && userId) {
+      const newAppWithUser = { ...formData, userId };
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newAppWithUser)
       })
+        .then(res => res.json())
+        .then(newApp => setApplications([...applications, newApp]))
+
+      setFormData({ company: '', role: '', status: '', date: '', duties: '', requirements: '' });
     }
   }
 
-  const handleDelete = (index: number) => {
-    setApplications(applications.filter((_, i) => i !== index))
+  // Delete application
+  const handleDelete = (id?: number) => {
+    if (!id) return
+    fetch(`${API_URL}/${id}`, { method: "DELETE" })
+      .then(() => setApplications(applications.filter(app => app.id !== id)))
   }
 
-  // Edit handlers
+  // Edit application
   const handleEditClick = (index: number) => {
     setEditingIndex(index)
     setEditingData({ ...applications[index] })
@@ -76,12 +94,20 @@ export default function Dashboard() {
   }
 
   const handleEditSave = () => {
-    if (editingIndex !== null && editingData) {
-      const updatedApps = [...applications]
-      updatedApps[editingIndex] = editingData
-      setApplications(updatedApps)
-      setEditingIndex(null)
-      setEditingData(null)
+    if (editingIndex !== null && editingData?.id) {
+      fetch(`${API_URL}/${editingData.id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(editingData)
+      })
+        .then(res => res.json())
+        .then(updatedApp => {
+          const updatedApps = [...applications]
+          updatedApps[editingIndex] = updatedApp
+          setApplications(updatedApps)
+          setEditingIndex(null)
+          setEditingData(null)
+        })
     }
   }
 
@@ -90,7 +116,7 @@ export default function Dashboard() {
     setEditingData(null)
   }
 
-  // Filter and sort
+  // Filter + Sort
   const filteredApps = applications
     .filter(app => {
       const searchLower = searchQuery.toLowerCase()
@@ -116,42 +142,35 @@ export default function Dashboard() {
   }
 
   return (
-    <div >
+    <div>
       <Navbar />
       <div className="dashboard-content">
-
         {/* Left column: Form + Controls */}
         <div className="dashboard-form">
           <form className="dashboardForm" onSubmit={handleAddApplication}>
             <h2 className="form-title">Job Application Dashboard</h2>
-            <label>
-              Company Name:
-              <input type="text" name="company" value={formData.company} onChange={handleChange} placeholder="Enter company name" />
+            <label>Company Name:
+              <input type="text" name="company" value={formData.company} onChange={e => setFormData({ ...formData, company: e.target.value })} />
             </label>
-            <label>
-              Role:
-              <input type="text" name="role" value={formData.role} onChange={handleChange} placeholder="Enter job role" />
+            <label>Role:
+              <input type="text" name="role" value={formData.role} onChange={e => setFormData({ ...formData, role: e.target.value })} />
             </label>
-            <label>
-              Status:
-              <select name="status" value={formData.status} onChange={handleChange}>
+            <label>Status:
+              <select name="status" value={formData.status} onChange={e => setFormData({ ...formData, status: e.target.value })}>
                 <option value="">Select Status</option>
                 <option value="Rejected">Rejected</option>
                 <option value="Applied">Applied</option>
                 <option value="Interviewed">Interviewed</option>
               </select>
             </label>
-            <label>
-              Date Applied:
-              <input type="date" name="date" value={formData.date} onChange={handleChange} />
+            <label>Date Applied:
+              <input type="date" name="date" value={formData.date} onChange={e => setFormData({ ...formData, date: e.target.value })} />
             </label>
-            <label>
-              Duties:
-              <input type="text" name="duties" value={formData.duties} onChange={handleChange} placeholder="Key responsibilities" />
+            <label>Duties:
+              <input type="text" name="duties" value={formData.duties} onChange={e => setFormData({ ...formData, duties: e.target.value })} />
             </label>
-            <label>
-              Requirements:
-              <input type="text" name="requirements" value={formData.requirements} onChange={handleChange} placeholder="Skills or experience" />
+            <label>Requirements:
+              <input type="text" name="requirements" value={formData.requirements} onChange={e => setFormData({ ...formData, requirements: e.target.value })} />
             </label>
             <button type="submit" className="submit-btn">Add Application</button>
           </form>
@@ -175,14 +194,14 @@ export default function Dashboard() {
         {/* Right column: Cards */}
         <div className="cards-container">
           {filteredApps.map((app, index) => (
-            <div key={index} className="application-card">
+            <div key={app.id || index} className="application-card">
               <h3>{app.company}</h3>
               <p><strong>Role:</strong> {app.role}</p>
               <p style={{ color: getStatusColor(app.status), fontWeight: 'bold' }}>{app.status}</p>
               <p><strong>Date:</strong> {app.date}</p>
               <p><strong>Duties:</strong> {app.duties}</p>
               <p><strong>Requirements:</strong> {app.requirements}</p>
-              <button className="delete-btn" onClick={() => handleDelete(index)}>Delete</button>
+              <button className="delete-btn" onClick={() => handleDelete(app.id)}>Delete</button>
               <button className="edit-btn" onClick={() => handleEditClick(index)}>Edit</button>
             </div>
           ))}

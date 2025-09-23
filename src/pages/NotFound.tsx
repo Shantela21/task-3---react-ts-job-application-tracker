@@ -20,7 +20,7 @@ export default function NotFound() {
         className="go-home"
       style={{fontWeight:"bolder", fontSize:"300%", color:"lightblue", marginTop:"5%"}}>
         Go Home
-      </Link>   
+      </Link>
     </div>
   );
 }
