@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import JobPage from './pages/JobPage'
-import Home from './pages/Dashboard'
+import NotFound from './pages/NotFound'
 import Dashboard from './pages/Dashboard'
 
 function App() {
@@ -16,7 +16,9 @@ function App() {
          <Route path='/' element={<LandingPage/>} />
          <Route path='/Login' element={<Login/>} />
          <Route path='/GetStarted' element={<Register/>} />
-         <Route path='/Dashboard' element={<Dashboard/>} />
+         <Route path='/Dashboard' element={<Dashboard/>}/>
+         <Route path='/*' element={<NotFound/>} />
+         <Route path='/JobPage' element={<JobPage/>} />
      </Routes>
     </>
   )
