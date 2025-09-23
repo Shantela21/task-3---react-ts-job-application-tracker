@@ -1,3 +1,4 @@
+<img src="https://socialify.git.ci/Shantela21/task-3---react-ts-job-application-tracker/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="task-3---react-ts-job-application-tracker" width="640" height="320" />
 # Job Application Tracker (React + TypeScript)
 
 This is a **Job Application Tracker** built with **React, TypeScript, Vite**, and **React Router**. The application helps users register, log in, view job listings, and manage their dashboard in a clean and simple interface.
