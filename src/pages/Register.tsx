@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackButton from "../components/BackButton";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
   // Required fields
@@ -142,9 +142,9 @@ export default function Register() {
           </select>
 
           {/* Submit */}
-          <button type="submit" className="register-btn" disabled={loading}>
-            {loading ? "Registering..." : "Submit"}
-          </button>
+          <button type="submit">
+            <Link to='/Login'  style={{color:"black"}} >Submit</Link></button>
+
         </form>
 
         {message && (

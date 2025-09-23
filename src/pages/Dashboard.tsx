@@ -1,5 +1,5 @@
 import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import BackButton from '../components/BackButton'
@@ -118,6 +118,7 @@ export default function Dashboard() {
   return (
     <div >
       <Navbar />
+      <BackButton/>
       
       <div className="dashboard-content">
 
