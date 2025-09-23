@@ -1,3 +1,44 @@
+/* Register page input styling */
+.register-input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f7fafc;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.register-input:focus {
+  border: 1.5px solid #388e3c;
+  outline: none;
+  background: #fff;
+}
+
+.register-btn {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.85rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(56, 143, 60, 0.10);
+  letter-spacing: 0.5px;
+  width: 100%;
+  margin-top: 10px;
+}
+.register-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.register-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #388e3c 0%, #43e97b 100%);
+  transform: translateY(-2px) scale(1.03);
+}
 /* Ensure login-button style matches the login page button */
 .login-button {
   background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
@@ -89,7 +130,8 @@ body,
 .landing-subtext {
   font-weight: 500;
   color: grey;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   line-height: 1.6;
 }
 
@@ -143,7 +185,7 @@ body,
 .section-heading {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .section-subtext {
@@ -484,6 +526,8 @@ body,
   color: black;
   text-align: center;
   height: 10vh;
+  margin-top: 11.5rem;
+
 }
 .footer >p{
  display: flex;

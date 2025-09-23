@@ -1,57 +1,8 @@
 {
   "users": [
-    {
-      "id": "6915",
-      "username": "Sne",
-      "password": "54321",
-      "applications": []
-    },
-    {
-      "id": "550a",
-      "username": "Sha",
-      "password": "123",
-      "applications": []
-    },
-    {
-      "id": "b46c",
-      "username": "Sne",
-      "password": "54321",
-      "applications": []
-    },
-    {
-      "id": "0b79",
-      "username": "Sne",
-      "password": "54321",
-      "applications": []
-    }
+    
   ],
-  "applications": [
-    {
-      "id": "e27d",
-      "company": "Dut",
-      "role": "Web developer",
-      "status": "Rejected",
-      "date": "2025-09-24",
-      "duties": "create apps",
-      "requirements": "javascript"
-    },
-    {
-      "id": "dbc9",
-      "company": "mlab",
-      "role": "Web developer",
-      "status": "Applied",
-      "date": "2025-07-10",
-      "duties": "create apps",
-      "requirements": "javascript"
-    },
-    {
-      "id": "0cdf",
-      "company": "UKZN",
-      "role": "Lecturer",
-      "status": "Interviewed",
-      "date": "",
-      "duties": "teach",
-      "requirements": "5 years experience"
-    }
+  "jobs": [
+    
   ]
 }

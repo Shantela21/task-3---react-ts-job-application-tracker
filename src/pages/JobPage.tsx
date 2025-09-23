@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import BackButton from '../components/BackButton';
 
 interface JobDetails {
   id: number;
@@ -30,6 +31,7 @@ const JobPage: React.FC = () => {
   return (
     <div>
       <Navbar />
+      <BackButton/>
       <div className="job-container" style={{ maxWidth: '800px', margin: '20px auto', padding: '20px', border: '1px solid #ddd', borderRadius: '8px', background: '#f9f9f9' }}>
         <h1 style={{ color: '#2e7d32', marginBottom: '10px' }}>{job.title}</h1>
         <h2 style={{ marginBottom: '5px' }}>{job.company}</h2>
