@@ -1,27 +1,6 @@
 {
   "users": [
-    {
-      "id": "f8bf",
-      "username": "KaMaphisa",
-      "email": "melo@gmail.com",
-      "password": "1234567",
-      "fullName": "Melo",
-      "phone": "",
-      "address": "",
-      "dob": "",
-      "gender": "",
-      "bio": "",
-      "applications": [
-        {
-          "company": "Dut",
-          "role": "Web developer",
-          "status": "Rejected",
-          "date": "2025-09-04",
-          "duties": "create apps",
-          "requirements": "javascript"
-        }
-      ]
-    },
+    {},
     {
       "id": "5d3a",
       "username": "shant",
@@ -35,31 +14,42 @@
       "bio": "",
       "applications": [
         {
+          "id": 1758784681926,
           "company": "mlab",
           "role": "Web developer",
-          "status": "Interviewed",
-          "date": "2025-09-02",
+          "status": "Rejected",
+          "date": "",
           "duties": "create apps",
-          "requirements": "javascript"
-        },
-        {
-          "company": "Linkedin",
-          "role": "Software support",
-          "status": "Applied",
-          "date": "2025-01-28",
-          "duties": "create apps",
-          "requirements": "javascript"
-        },
+          "requirements": "htht",
+          "address": "htyhh",
+          "contact": "hhh",
+          "extraInfo": "hhhh"
+        }
+      ]
+    },
+    {
+      "id": "efc3",
+      "username": "mm",
+      "email": "sne@gmail.com",
+      "password": "Snemm",
+      "fullName": "Sne",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": [
         {
           "company": "Geekulture",
           "role": "Web developer",
           "status": "Interviewed",
-          "date": "2025-09-03",
+          "date": "2025-06-05",
           "duties": "create apps",
           "requirements": "javascript",
-          "address": "1232fvbb",
-          "contact": "0987654321",
-          "extraInfo": "efrgyhjyukjuy"
+          "address": "Johannesburg",
+          "contact": "0789123456",
+          "extraInfo": "gtthyyhyu",
+          "id": 1758785009275
         }
       ]
     }
