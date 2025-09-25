@@ -70,16 +70,23 @@ export default function Register() {
     <div>
       <Navbar />
       <BackButton />
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <input placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} />
-        <input placeholder="Username *" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <div className="container-login h2" >
+      <h2  style={{
+            fontWeight: 'bolder',
+            color: 'green',
+            fontFamily: 'sans-serif',
+            textAlign: 'center',
+          }} >Register</h2>
+      <form className="form " onSubmit={handleSubmit}>
+        <input  className="register-input" placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} />
+        <input   className="register-input"  placeholder="Username *" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input className="register-input"  placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input placeholder="Password *" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <input placeholder="Confirm Password *" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-        <button type="submit">Submit</button>
+        <button className="register-btn " type="submit">Submit</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p style={{ textAlign: 'center', color: 'blue', marginTop: '1rem' }}>{message}</p>}
+      </div>
       <Footer />
     </div>
   );
