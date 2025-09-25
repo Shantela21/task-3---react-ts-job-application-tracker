@@ -1,70 +1,126 @@
-# React + TypeScript + Vite
+<img src="https://socialify.git.ci/Shantela21/task-3---react-ts-job-application-tracker/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="task-3---react-ts-job-application-tracker" width="640" height="320" />
+# Job Application Tracker (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **Job Application Tracker** built with **React, TypeScript, Vite**, and **React Router**. The application helps users register, log in, view job listings, and manage their dashboard in a clean and simple interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Landing Page**: Introduction to the application.  
+- **Login & Registration**: Authentication pages for users.  
+- **Dashboard**: Manage job applications and view details.  
+- **Job Page**: Browse job listings.  
+- **404 Page**: Handles undefined routes with a friendly error page.  
+- **Routing**: Client-side routing using React Router.  
+- **JSON Server**: Mock backend for testing and data storage.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React, TypeScript, Vite  
+- **Routing**: React Router v7  
+- **Styling**: CSS  
+- **Backend (Mock)**: JSON Server  
+- **Utilities**: React Toastify for notifications  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Installation & Setup  
+
+Follow these steps to set up the project locally:
+
+
+# Clone the repository
+```bash
+git clone https://github.com/Shantela21/task-3---react-ts-job-application-tracker.git
+```
+# Navigate to the project folder
+```bash
+cd task-3---react-ts-job-application-tracker
+```
+# Install dependencies
+```bash
+npm install
+```
+# Start the development server
+```bash
+npm run dev
+````
+
+## Running JSON Server
+
+The project uses **JSON Server** to simulate a backend. Start it with:
+
+```bash
+npx json-server --watch db.json --port 5000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Make sure to create a `db.json` file in the root folder with sample data, for example:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```json
+{
+  "jobs": [
+    { "id": 1, "title": "Frontend Developer", "company": "Tech Corp" },
+    { "id": 2, "title": "Backend Engineer", "company": "Code Labs" }
+  ]
+}
 ```
-# task-3---react-ts-job-application-tracker
+
+---
+
+## Available Scripts
+
+| Script            | Description                       |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Start the development server      |
+| `npm run build`   | Build the project for production  |
+| `npm run preview` | Preview the production build      |
+| `npm run lint`    | Run ESLint for code quality check |
+
+---
+
+## Project Structure
+
+```
+task-3---react-ts-job-application-tracker
+│
+├── public            # Static assets
+├── src
+│   ├── pages         # LandingPage, Login, Register, Dashboard, JobPage, NotFound
+│   ├── App.tsx       # Main App component with routing
+│   ├── App.css       # Global styles
+│   └── main.tsx      # Entry point
+│
+├── db.json           # Mock database for JSON Server
+├── package.json      # Dependencies and scripts
+└── README.md         # Project documentation
+```
+
+---
+
+## Dependencies
+
+* **react**: UI Library
+* **react-router-dom**: Routing
+* **json-server**: Mock API Server
+* **react-toastify**: Notifications
+
+Dev dependencies include **TypeScript**, **Vite**, **ESLint**, and related plugins.
+
+---
+
+## Future Improvements
+
+* Add authentication with JWT
+* Implement persistent storage with a real database
+* Enhance UI with a design library like Tailwind or Material-UI
+
+---
+
+## Author
+Shantela Noyila
+
+
+

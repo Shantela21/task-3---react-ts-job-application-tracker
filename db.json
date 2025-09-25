@@ -1,8 +1,96 @@
 {
   "users": [
-    
-  ],
-  "jobs": [
-    
+    {},
+    {
+      "id": "5d3a",
+      "username": "shant",
+      "email": "shant@gmail.com",
+      "password": "0987654",
+      "fullName": "Shantela",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": [
+        {
+          "id": 1758784681926,
+          "company": "mlab",
+          "role": "Web developer",
+          "status": "Rejected",
+          "date": "",
+          "duties": "create apps",
+          "requirements": "htht",
+          "address": "htyhh",
+          "contact": "hhh",
+          "extraInfo": "hhhh"
+        }
+      ]
+    },
+    {
+      "id": "efc3",
+      "username": "mm",
+      "email": "sne@gmail.com",
+      "password": "Snemm",
+      "fullName": "Sne",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": [
+        {
+          "company": "Geekulture",
+          "role": "Web developer",
+          "status": "Interviewed",
+          "date": "2025-06-05",
+          "duties": "create apps",
+          "requirements": "javascript",
+          "address": "Johannesburg",
+          "contact": "0789123456",
+          "extraInfo": "gtthyyhyu",
+          "id": 1758785009275
+        }
+      ]
+    },
+    {
+      "id": "9f54",
+      "username": "John",
+      "email": "john@gmail.com",
+      "password": "123456",
+      "fullName": "John Doe",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": [
+        {
+          "company": "Dut",
+          "role": "Web developer",
+          "status": "Applied",
+          "date": "2025-08-31",
+          "duties": "create apps",
+          "requirements": "javascript",
+          "address": "Johannesburg",
+          "contact": "0789123456",
+          "extraInfo": "iukjhth",
+          "id": 1758787159761
+        }
+      ]
+    },
+    {
+      "id": "6db7",
+      "username": "leee",
+      "email": "leee@gmai.com",
+      "password": "0987654",
+      "fullName": "leee",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": []
+    }
   ]
 }

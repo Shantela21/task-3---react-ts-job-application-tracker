@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import JobPage from './pages/JobPage'
 import NotFound from './pages/NotFound'
 import Dashboard from './pages/Dashboard'
+import BackButton from './components/BackButton'
 
 function App() {
  
@@ -18,7 +19,8 @@ function App() {
          <Route path='/GetStarted' element={<Register/>} />
          <Route path='/Dashboard' element={<Dashboard/>}/>
          <Route path='/*' element={<NotFound/>} />
-         <Route path='/JobPage' element={<JobPage/>} />
+         <Route path="/job/:jobId" element={<JobPage />} />
+         <Route path='/' element={<BackButton/>}/>
      </Routes>
     </>
   )
