@@ -1,8 +1,67 @@
 {
   "users": [
-    
-  ],
-  "jobs": [
-    
+    {
+      "id": "f8bf",
+      "username": "KaMaphisa",
+      "email": "melo@gmail.com",
+      "password": "1234567",
+      "fullName": "Melo",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": [
+        {
+          "company": "Dut",
+          "role": "Web developer",
+          "status": "Rejected",
+          "date": "2025-09-04",
+          "duties": "create apps",
+          "requirements": "javascript"
+        }
+      ]
+    },
+    {
+      "id": "5d3a",
+      "username": "shant",
+      "email": "shant@gmail.com",
+      "password": "0987654",
+      "fullName": "Shantela",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": [
+        {
+          "company": "mlab",
+          "role": "Web developer",
+          "status": "Interviewed",
+          "date": "2025-09-02",
+          "duties": "create apps",
+          "requirements": "javascript"
+        },
+        {
+          "company": "Linkedin",
+          "role": "Software support",
+          "status": "Applied",
+          "date": "2025-01-28",
+          "duties": "create apps",
+          "requirements": "javascript"
+        },
+        {
+          "company": "Geekulture",
+          "role": "Web developer",
+          "status": "Interviewed",
+          "date": "2025-09-03",
+          "duties": "create apps",
+          "requirements": "javascript",
+          "address": "1232fvbb",
+          "contact": "0987654321",
+          "extraInfo": "efrgyhjyukjuy"
+        }
+      ]
+    }
   ]
 }

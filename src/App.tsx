@@ -18,7 +18,8 @@ function App() {
          <Route path='/GetStarted' element={<Register/>} />
          <Route path='/Dashboard' element={<Dashboard/>}/>
          <Route path='/*' element={<NotFound/>} />
-         <Route path='/JobPage' element={<JobPage/>} />
+         <Route path="/job/:jobId" element={<JobPage />} />
+
      </Routes>
     </>
   )
