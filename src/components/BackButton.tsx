@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function BackButton() {
@@ -12,18 +11,31 @@ export default function BackButton() {
   };
 
   return (
-    <button
-      onClick={handleBackToLogin}
-      style={{
-        margin: "10px",
-        padding: "5px 10px",
-        border: "1px solid #ccc",
-        borderRadius: "5px",
-        background: "lightgray",
-        cursor: "pointer"
-      }}
-    >
-      Back
-    </button>
+    <div style={{ display: 'flex', gap: '10px', margin: '10px' }}>
+      <button
+        onClick={handleBackToLogin}
+        style={{
+          padding: "5px 10px",
+          border: "1px solid #ccc",
+          borderRadius: "5px",
+          background: "lightgray",
+          cursor: "pointer"
+        }}
+      >
+        Logout
+      </button>
+      <button
+        onClick={() => navigate(-1)}
+        style={{
+          padding: "5px 10px",
+          border: "1px solid #ccc",
+          borderRadius: "5px",
+          background: "lightgray",
+          cursor: "pointer"
+        }}
+      >
+        Back
+      </button>
+    </div>
   );
 }

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +29,9 @@ export default function Login() {
       );
 
       if (userFound) {
+        localStorage.setItem('userId', userFound.id);
         setMessage(`Welcome back, ${username}! Login successful.`);
+        setTimeout(() => navigate('/Dashboard'), 1500);
       } else {
         setMessage('Invalid username or password. Please try again.');
       }
@@ -80,7 +83,7 @@ export default function Login() {
           <br />
           <br />
 
-          <button type="submit"> <Link to='/Dashboard' style={{color:"black"}}>Submit</Link></button>
+          <button type="submit">Submit</button>
         </form>
 
         {message && (

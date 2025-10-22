@@ -1,24 +1,11 @@
 {
   "users": [
     {
-      "id": "dd73",
-      "username": "slie",
-      "email": "slie@gmail.com",
+      "id": "a386",
+      "username": "testuser",
+      "email": "testuse@gmail.com",
       "password": "123456",
-      "fullName": "slie",
-      "phone": "",
-      "address": "",
-      "dob": "",
-      "gender": "",
-      "bio": "",
-      "applications": []
-    },
-    {
-      "id": "03d4",
-      "username": "slie",
-      "email": "slie@gmail.com",
-      "password": "123456",
-      "fullName": "slie",
+      "fullName": "testuser",
       "phone": "",
       "address": "",
       "dob": "",
@@ -29,13 +16,13 @@
           "company": "Dut",
           "role": "Web developer",
           "status": "Rejected",
-          "date": "2025-10-02",
-          "duties": "create apps",
-          "requirements": "javascript",
-          "address": "Johannesburg",
+          "date": "2025-09-29",
+          "duties": "kgcgchg",
+          "requirements": "python",
+          "address": "Groutville",
           "contact": "0789123456",
           "extraInfo": "",
-          "id": 1761121962120
+          "id": 1761140116917
         }
       ]
     }
