@@ -1,8 +1,9 @@
 import { useState, useEffect, type ChangeEvent, type FormEvent } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackButton from "../components/BackButton";
+import JobCard from "../components/JobCard";
 
 interface Application {
   id: number; // Unique ID for each application
@@ -137,15 +138,6 @@ export default function Dashboard() {
         : new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
-  // Status colors
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "Rejected": return "#e74c3c";
-      case "Applied": return "#f1c40f";
-      case "Interviewed": return "#2ecc71";
-      default: return "#bdc3c7";
-    }
-  };
 
   return (
     <div>
@@ -193,24 +185,31 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Right column: Cards */}
+        {/* Right column: Job Cards */}
         <div className="cards-container" style={{ flex: 1, display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {filteredApps.map((app, index) => (
-            <div key={app.id} className="application-card" style={{ border: "1px solid #ccc", padding: "1rem", borderRadius: "8px" }}>
-              <h3>{app.company}</h3>
-              <p><strong>Role:</strong> {app.role}</p>
-              <p style={{ color: getStatusColor(app.status), fontWeight: "bold" }}>{app.status}</p>
-              <p><strong>Date:</strong> {app.date}</p>
-              <p><strong>Duties:</strong> {app.duties}</p>
-              <p><strong>Requirements:</strong> {app.requirements}</p>
-              <button >
-              <Link style={{color:"black"}} to={`/job/${app.id}`}>View Details</Link></button>
-              <div  style={{ marginTop: "0.5rem" }}>
-                <button className="delete-btn" onClick={() => handleDelete(index)}>Delete</button>
-                <button className="edit-btn " onClick={() => handleEditClick(index)}>Edit</button>
-              </div>
+          {filteredApps.length === 0 ? (
+            <div style={{ 
+              textAlign: "center", 
+              padding: "2rem", 
+              color: "#7f8c8d",
+              backgroundColor: "#f8f9fa",
+              borderRadius: "8px",
+              border: "2px dashed #dee2e6"
+            }}>
+              <h3 style={{ margin: "0 0 0.5rem 0" }}>No Job Applications Yet</h3>
+              <p style={{ margin: "0" }}>Add your first job application using the form on the left!</p>
             </div>
-          ))}
+          ) : (
+            filteredApps.map((app, index) => (
+              <JobCard
+                key={app.id}
+                application={app}
+                index={index}
+                onDelete={handleDelete}
+                onEdit={handleEditClick}
+              />
+            ))
+          )}
         </div>
       </div>
 
