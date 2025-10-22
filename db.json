@@ -1,73 +1,24 @@
 {
   "users": [
     {
-      "id": "05fe",
-      "username": "doe",
-      "email": "doe@gmail.com",
-      "password": "123456",
-      "fullName": "John",
-      "phone": "",
-      "address": "",
-      "dob": "",
-      "gender": "",
-      "bio": "",
-      "applications": [
-        {
-          "company": "Dut",
-          "role": "Web developer",
-          "status": "Applied",
-          "date": "2025-07-03",
-          "duties": "create apps",
-          "requirements": "javascript",
-          "address": "Johannesburg",
-          "contact": "0987654321",
-          "extraInfo": "",
-          "id": 1761120842440
-        },
-        {
-          "company": "mlab",
-          "role": "Web designer",
-          "status": "Rejected",
-          "date": "2025-05-07",
-          "duties": "create apps",
-          "requirements": "javascript",
-          "address": "Groutville",
-          "contact": "0789123456",
-          "extraInfo": "hdydjhvm",
-          "id": 1761120893295
-        },
-        {
-          "company": "Geekulture",
-          "role": "Web developer",
-          "status": "Rejected",
-          "date": "2025-01-08",
-          "duties": "create apps",
-          "requirements": "javascript",
-          "address": "Johannesburg",
-          "contact": "0987654321",
-          "extraInfo": "srysdgvfhdcghddt",
-          "id": 1761120955359
-        },
-        {
-          "company": "Dut",
-          "role": "Web developer",
-          "status": "Interviewed",
-          "date": "2025-09-29",
-          "duties": "create apps",
-          "requirements": "javascript",
-          "address": "Johannesburg",
-          "contact": "0789123456",
-          "extraInfo": "",
-          "id": 1761120981783
-        }
-      ]
-    },
-    {
-      "id": "063e",
+      "id": "dd73",
       "username": "slie",
       "email": "slie@gmail.com",
-      "password": "09876",
-      "fullName": "Slie",
+      "password": "123456",
+      "fullName": "slie",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": []
+    },
+    {
+      "id": "03d4",
+      "username": "slie",
+      "email": "slie@gmail.com",
+      "password": "123456",
+      "fullName": "slie",
       "phone": "",
       "address": "",
       "dob": "",
@@ -75,16 +26,16 @@
       "bio": "",
       "applications": [
         {
-          "company": "Geekulture",
-          "role": "Web ",
-          "status": "Interviewed",
-          "date": "2025-10-09",
+          "company": "Dut",
+          "role": "Web developer",
+          "status": "Rejected",
+          "date": "2025-10-02",
           "duties": "create apps",
           "requirements": "javascript",
-          "address": "Groutville",
+          "address": "Johannesburg",
           "contact": "0789123456",
           "extraInfo": "",
-          "id": 1761121083480
+          "id": 1761121962120
         }
       ]
     }

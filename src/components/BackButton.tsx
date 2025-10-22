@@ -4,9 +4,16 @@ import { useNavigate } from 'react-router-dom';
 export default function BackButton() {
   const navigate = useNavigate();
 
+  const handleBackToLogin = () => {
+    // Clear user session data
+    localStorage.removeItem('userId');
+    // Navigate to login page
+    navigate('/');
+  };
+
   return (
     <button
-      onClick={() => navigate(-1)}
+      onClick={handleBackToLogin}
       style={{
         margin: "10px",
         padding: "5px 10px",
