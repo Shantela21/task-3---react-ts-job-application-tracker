@@ -1,19 +1,23 @@
 import React from 'react'
 
-export default function Footer() {
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className }: FooterProps) {
   return (
-    <footer className="footer">
+    <footer className={`footer ${className || ''}`.trim()}>
       <div className="footer-content">
-        <span style={{ fontWeight: 700, fontSize: '1.1rem' }}>Job Application Tracker</span>
-        <span style={{ margin: '0.5rem 0', fontSize: '0.95rem', color: '#e0e0e0' }}>
+        <span className="footer-title">Job Application Tracker</span>
+        <span className="footer-tagline">
           Track smarter, apply faster, succeed sooner.
         </span>
-        <div style={{ margin: '0.5rem 0', fontSize: '0.9rem' }}>
-          <a href="mailto:support@jobtracker.com" style={{ color: '#fff', textDecoration: 'underline', marginRight: 12 }}>Contact</a>
-          <a href="#" style={{ color: '#fff', textDecoration: 'underline', marginRight: 12 }}>Privacy Policy</a>
-          <a href="#" style={{ color: '#fff', textDecoration: 'underline' }}>Terms</a>
+        <div className="footer-links">
+          <a href="mailto:support@jobtracker.com" className="footer-link">Contact</a>
+          <a href="#" className="footer-link">Privacy Policy</a>
+          <a href="#" className="footer-link">Terms</a>
         </div>
-        <span style={{ fontSize: '0.85rem', color: '#bdbdbd' }}>
+        <span className="footer-copyright">
           &copy; {new Date().getFullYear()} Job Application Tracker. All rights reserved.
         </span>
       </div>

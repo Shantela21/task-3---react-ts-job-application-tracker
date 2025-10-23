@@ -92,7 +92,7 @@ export default function Login() {
           </p>
         )}
       </div>
-      <Footer />
+      <Footer className="fixed" />
     </div>
   );
 }
