@@ -87,7 +87,7 @@ export default function Register() {
       </form>
       {message && <p style={{ textAlign: 'center', color: 'blue', marginTop: '1rem' }}>{message}</p>}
       </div>
-      <Footer />
+      <Footer className="fixed" />
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function LandingPage() {
           and can focus on what really matters—getting hired.
         </p>
       </div>
-      <Footer/>
+      <Footer className="fixed"/>
 
     </div>
   )
