@@ -42,7 +42,7 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className='main-container'>
       <Navbar />
       <BackButton/>
       <div className="container-login">

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className="main-LandingPage">
 
       <Navbar/>
       <div className="landingPage">

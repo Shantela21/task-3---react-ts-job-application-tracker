@@ -67,7 +67,7 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <div className="main-register">
       <Navbar />
       <BackButton />
       <div className="container-login h2" >
