@@ -54,7 +54,7 @@ npm run dev
 The project uses **JSON Server** to simulate a backend. Start it with:
 
 ```bash
-npx json-server --watch db.json --port 3000
+npx json-server --watch db.json --port 5000
 ```
 
 Make sure to create a `db.json` file in the root folder with sample data, for example:

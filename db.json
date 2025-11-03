@@ -25,6 +25,19 @@
           "id": 1761140116917
         }
       ]
+    },
+    {
+      "id": "6dde",
+      "username": "msizi2",
+      "email": "msizi@gmail.com",
+      "password": "12345",
+      "fullName": "msizi",
+      "phone": "",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "bio": "",
+      "applications": []
     }
   ]
 }
