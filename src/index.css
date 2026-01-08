@@ -66,3 +66,40 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Navbar styles */
+.navbar {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.brand {
+  color: #646cff;
+}
+.logout-btn {
+  padding: 5px 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: lightgray;
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+}
+.logout-btn:hover {
+  background: #e0e0e0;
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar {
+    background: #f6f7fb;
+    border-bottom-color: rgba(33, 53, 71, 0.06);
+  }
+  .logout-btn {
+    background: #ef4444;
+    color: #fff;
+  }
+}

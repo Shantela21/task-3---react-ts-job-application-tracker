@@ -1,29 +1,17 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function BackButton() {
   const navigate = useNavigate();
 
   const handleBackToLogin = () => {
     // Clear user session data
-    localStorage.removeItem('userId');
+    localStorage.removeItem("userId");
     // Navigate to login page
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <div style={{ display: 'flex', gap: '10px', margin: '10px' }}>
-      <button
-        onClick={handleBackToLogin}
-        style={{
-          padding: "5px 10px",
-          border: "1px solid #ccc",
-          borderRadius: "5px",
-          background: "lightgray",
-          cursor: "pointer"
-        }}
-      >
-        Logout
-      </button>
+    <div style={{ display: "flex", gap: "10px", margin: "10px" }}>
       <button
         onClick={() => navigate(-1)}
         style={{
@@ -31,7 +19,7 @@ export default function BackButton() {
           border: "1px solid #ccc",
           borderRadius: "5px",
           background: "lightgray",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         Back
